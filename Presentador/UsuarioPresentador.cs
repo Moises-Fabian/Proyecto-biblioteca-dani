@@ -20,7 +20,7 @@ namespace BookWorldApp.Presentador
 
         public void OnObtenerUsuarios(object sender, EventArgs e)
         {
-            _usuarioVista.MostrarUsuarios(_usuarioServicio.ObtenerTodos());
+            _usuarioVista.MostrarUsuarios(_usuarioServicio.ObtenerUsuarios());
         }
 
         public void OnAgregarUsuario(object sender, EventArgs e) 
@@ -60,7 +60,7 @@ namespace BookWorldApp.Presentador
             }
 
             _usuarioServicio.AgregarUsuario(nuevoUsuario);
-            _usuarioVista.MostrarUsuarios(_usuarioServicio.ObtenerTodos());
+            _usuarioVista.MostrarUsuarios(_usuarioServicio.ObtenerUsuarios());
             LimpiarCampos();
         }
 
@@ -83,7 +83,7 @@ namespace BookWorldApp.Presentador
             };
 
             _usuarioServicio.EditarUsuario(usuarioActualizado);
-            _usuarioVista.MostrarUsuarios(_usuarioServicio.ObtenerTodos());
+            _usuarioVista.MostrarUsuarios(_usuarioServicio.ObtenerUsuarios());
             LimpiarCampos();
         }
 
@@ -98,7 +98,7 @@ namespace BookWorldApp.Presentador
             }
 
             _usuarioServicio.EliminarUsuario(_usuarioVista.Rut);
-            _usuarioVista.MostrarUsuarios(_usuarioServicio.ObtenerTodos());
+            _usuarioVista.MostrarUsuarios(_usuarioServicio.ObtenerUsuarios());
             LimpiarCampos();
         }
 
