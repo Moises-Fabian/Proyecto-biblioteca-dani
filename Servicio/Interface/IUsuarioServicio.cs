@@ -4,7 +4,7 @@ namespace BookWorldApp.Servicio.Interface
 {
     public interface IUsuarioServicio
     {
-        List<Usuario> ObtenerTodos();
+        List<Usuario> ObtenerUsuarios();
         void AgregarUsuario(Usuario usuario);
         void EditarUsuario(Usuario usuarioActualizado);
         void EliminarUsuario(string rut);

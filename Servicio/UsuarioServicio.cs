@@ -19,7 +19,7 @@ namespace BookWorldApp.Servicio
             _usuarios.Add(new Usuario() { Rut = "19222256-7", Nombre = "Moisés Lagos", Correo = "moises@gmail.com", Telefono = "+5691111111" });
         }
 
-        public List<Usuario> ObtenerTodos()
+        public List<Usuario> ObtenerUsuarios()
         {
             return _usuarios;
         }
