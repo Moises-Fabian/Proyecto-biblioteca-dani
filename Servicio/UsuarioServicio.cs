@@ -24,12 +24,12 @@ namespace BookWorldApp.Servicio
             return _usuarios;
         }
 
-        public void Agregar(Usuario usuario)
+        public void AgregarUsuario(Usuario usuario)
         {
             _usuarios.Add(usuario);
         }
 
-        public void Editar(Usuario usuarioActualizado)
+        public void EditarUsuario(Usuario usuarioActualizado)
         {
             var usuarioExistente = _usuarios.FirstOrDefault(u => u.Rut == usuarioActualizado.Rut);
             if (usuarioExistente != null)
@@ -40,7 +40,7 @@ namespace BookWorldApp.Servicio
             }
         }
 
-        public void Eliminar(string rut)
+        public void EliminarUsuario(string rut)
         {
             var usuario = _usuarios.FirstOrDefault(u => u.Rut == rut);
             if (usuario != null)
@@ -49,7 +49,7 @@ namespace BookWorldApp.Servicio
             }
         }
 
-        public bool Existe(string rut)
+        public bool ExisteUsuario(string rut)
         {
             return _usuarios.Any(u => u.Rut == rut);
         }

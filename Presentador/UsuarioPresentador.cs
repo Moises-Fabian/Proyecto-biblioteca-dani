@@ -25,7 +25,7 @@ namespace BookWorldApp.Presentador
 
         public void OnAgregarUsuario(object sender, EventArgs e) 
         {
-            bool usuarioExistente = _usuarioServicio.Existe(_usuarioVista.Rut);
+            bool usuarioExistente = _usuarioServicio.ExisteUsuario(_usuarioVista.Rut);
 
             if (usuarioExistente == true)
             {
@@ -59,14 +59,14 @@ namespace BookWorldApp.Presentador
                 return;
             }
 
-            _usuarioServicio.Agregar(nuevoUsuario);
+            _usuarioServicio.AgregarUsuario(nuevoUsuario);
             _usuarioVista.MostrarUsuarios(_usuarioServicio.ObtenerTodos());
             LimpiarCampos();
         }
 
         public void OnEditarUsuario(object sender, EventArgs e)
         {
-            bool usuarioExistente = _usuarioServicio.Existe(_usuarioVista.Rut);
+            bool usuarioExistente = _usuarioServicio.ExisteUsuario(_usuarioVista.Rut);
 
             if (usuarioExistente == false)
             {
@@ -82,14 +82,14 @@ namespace BookWorldApp.Presentador
                 Telefono = _usuarioVista.Telefono
             };
 
-            _usuarioServicio.Editar(usuarioActualizado);
+            _usuarioServicio.EditarUsuario(usuarioActualizado);
             _usuarioVista.MostrarUsuarios(_usuarioServicio.ObtenerTodos());
             LimpiarCampos();
         }
 
         public void OnEliminarUsuario(object sender, EventArgs e)
         {
-            var usuarioExiste = _usuarioServicio.Existe(_usuarioVista.Rut);
+            var usuarioExiste = _usuarioServicio.ExisteUsuario(_usuarioVista.Rut);
 
             if (!usuarioExiste)
             {
@@ -97,7 +97,7 @@ namespace BookWorldApp.Presentador
                 return;
             }
 
-            _usuarioServicio.Eliminar(_usuarioVista.Rut);
+            _usuarioServicio.EliminarUsuario(_usuarioVista.Rut);
             _usuarioVista.MostrarUsuarios(_usuarioServicio.ObtenerTodos());
             LimpiarCampos();
         }
