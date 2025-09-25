@@ -1,4 +1,6 @@
 ﻿using BookWorldApp.Presentador;
+using BookWorldApp.Servicio;
+using BookWorldApp.Servicio.Interface;
 using BookWorldApp.Vista;
 using BookWorldApp.Vista.Interface;
 
@@ -6,19 +8,17 @@ namespace BookWorldApp
 {
     public partial class Form1 : Form
     {
+        private readonly IUsuarioServicio _usuarioServicio;
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
+            _usuarioServicio = new UsuarioServicio();
         }
 
         private void btn_usuarios_Click(object sender, EventArgs e)
         {
             IUsuarioVista vista = new Form2();
-            UsuarioPresentador presentador = new UsuarioPresentador(vista);
+            UsuarioPresentador presentador = new UsuarioPresentador(vista, _usuarioServicio);
 
             ((Form)vista).ShowDialog();
         }
