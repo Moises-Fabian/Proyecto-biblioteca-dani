@@ -42,7 +42,7 @@ namespace BookWorldApp.Servicio
 
         public void EliminarUsuario(string rut)
         {
-            var usuario = _usuarios.FirstOrDefault(u => u.Rut == rut);
+            var usuario = _usuarios.FirstOrDefault(x => x.Rut == rut);
             if (usuario != null)
             {
                 _usuarios.Remove(usuario);
