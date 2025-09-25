@@ -50,15 +50,14 @@ namespace BookWorldApp.Vista
         {
             EditarUsuario?.Invoke(this, EventArgs.Empty);
         }
+        private void btn_eliminar(object sender, EventArgs e)
+        {
+            EliminarUsuario?.Invoke(this, EventArgs.Empty);
+        }
 
         public void MostrarMensaje(string mensaje)
         {
             MessageBox.Show(mensaje);
-        }
-
-        private void btn_eliminar(object sender, EventArgs e)
-        {
-            EliminarUsuario?.Invoke(this, EventArgs.Empty);
         }
     }
 }
