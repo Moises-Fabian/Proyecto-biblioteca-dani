@@ -45,7 +45,7 @@ namespace BookWorldApp.Presentador
                 Id = _libroService.ObtenerLibros().Count + 1,
                 Titulo = _libroVista.Titulo,
                 Autor = _libroVista.Autor,
-                AnioPublicacion = _libroVista.AnioPublicacion,
+                AnioPublicacion = int.Parse(_libroVista.AnioPublicacion),
                 Genero = _libroVista.Genero
             };
 
@@ -87,9 +87,9 @@ namespace BookWorldApp.Presentador
                 Id = int.Parse(_libroVista.Id),
                 Titulo = _libroVista.Titulo,
                 Autor = _libroVista.Autor,
-                AnioPublicacion = _libroVista.AnioPublicacion,
+                AnioPublicacion = int.Parse(_libroVista.AnioPublicacion),
                 Genero = _libroVista.Genero,
-                Existencias = _libroVista.Existencias
+                Existencias = int.Parse(_libroVista.Existencias)
             };
 
             _libroService.EditarLibro(libroActualizado);

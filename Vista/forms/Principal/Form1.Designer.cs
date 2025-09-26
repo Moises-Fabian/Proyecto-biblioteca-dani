@@ -71,6 +71,7 @@
             btn_prestamos.TabIndex = 3;
             btn_prestamos.Text = "Préstamos";
             btn_prestamos.UseVisualStyleBackColor = true;
+            btn_prestamos.Click += btn_prestamos_Click;
             // 
             // Form1
             // 

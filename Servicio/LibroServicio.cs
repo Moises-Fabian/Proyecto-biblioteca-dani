@@ -22,27 +22,27 @@ namespace BookWorldApp.Servicio
                     Id = 1,
                     Titulo = "Cien años de lucha",
                     Autor = "Gabriel García Márquez",
-                    AnioPublicacion = "1967",
+                    AnioPublicacion = 1967,
                     Genero = "Realismo mágico",
-                    Existencias = "5"
+                    Existencias = 5
                 },
                 new Libro
                 {
                     Id = 2,
                     Titulo = "1984",
                     Autor = "George Orwell",
-                    AnioPublicacion = "1949",
+                    AnioPublicacion = 1949,
                     Genero = "Ciencia ficción distópica",
-                    Existencias = "2"
+                    Existencias = 2
                 },
                 new Libro
                 {
                     Id = 3,
                     Titulo = "El señor de los anillos",
                     Autor = "J.R.R. Tolkien",
-                    AnioPublicacion = "1954",
+                    AnioPublicacion = 1954,
                     Genero = "Fantasía épica",
-                    Existencias = "3"
+                    Existencias = 3
                 }
             });
         }
