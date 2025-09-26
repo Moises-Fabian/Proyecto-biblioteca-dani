@@ -50,7 +50,7 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.Firebrick;
-            label2.Location = new Point(582, 349);
+            label2.Location = new Point(9, 359);
             label2.Name = "label2";
             label2.Size = new Size(245, 20);
             label2.TabIndex = 27;
@@ -59,7 +59,7 @@
             // label
             // 
             label.AutoSize = true;
-            label.Location = new Point(601, 59);
+            label.Location = new Point(28, 69);
             label.Name = "label";
             label.Size = new Size(47, 20);
             label.TabIndex = 26;
@@ -67,7 +67,7 @@
             // 
             // btn_eliminarLibro
             // 
-            btn_eliminarLibro.Location = new Point(601, 485);
+            btn_eliminarLibro.Location = new Point(28, 495);
             btn_eliminarLibro.Name = "btn_eliminarLibro";
             btn_eliminarLibro.Size = new Size(94, 29);
             btn_eliminarLibro.TabIndex = 25;
@@ -77,14 +77,14 @@
             // 
             // campo_titulo
             // 
-            campo_titulo.Location = new Point(601, 82);
+            campo_titulo.Location = new Point(28, 92);
             campo_titulo.Name = "campo_titulo";
             campo_titulo.Size = new Size(125, 27);
             campo_titulo.TabIndex = 24;
             // 
             // btn_editarLibro
             // 
-            btn_editarLibro.Location = new Point(601, 450);
+            btn_editarLibro.Location = new Point(28, 460);
             btn_editarLibro.Name = "btn_editarLibro";
             btn_editarLibro.Size = new Size(94, 29);
             btn_editarLibro.TabIndex = 23;
@@ -94,7 +94,7 @@
             // 
             // btn_agregarLibro
             // 
-            btn_agregarLibro.Location = new Point(601, 311);
+            btn_agregarLibro.Location = new Point(28, 321);
             btn_agregarLibro.Name = "btn_agregarLibro";
             btn_agregarLibro.Size = new Size(94, 29);
             btn_agregarLibro.TabIndex = 22;
@@ -104,7 +104,7 @@
             // 
             // campo_anio
             // 
-            campo_anio.Location = new Point(601, 198);
+            campo_anio.Location = new Point(28, 208);
             campo_anio.Name = "campo_anio";
             campo_anio.Size = new Size(125, 27);
             campo_anio.TabIndex = 21;
@@ -112,7 +112,7 @@
             // correo_usuario
             // 
             correo_usuario.AutoSize = true;
-            correo_usuario.Location = new Point(601, 175);
+            correo_usuario.Location = new Point(28, 185);
             correo_usuario.Name = "correo_usuario";
             correo_usuario.Size = new Size(36, 20);
             correo_usuario.TabIndex = 20;
@@ -120,7 +120,7 @@
             // 
             // campo_genero
             // 
-            campo_genero.Location = new Point(601, 261);
+            campo_genero.Location = new Point(28, 271);
             campo_genero.Name = "campo_genero";
             campo_genero.Size = new Size(125, 27);
             campo_genero.TabIndex = 19;
@@ -128,7 +128,7 @@
             // telefono_usuario
             // 
             telefono_usuario.AutoSize = true;
-            telefono_usuario.Location = new Point(601, 238);
+            telefono_usuario.Location = new Point(28, 248);
             telefono_usuario.Name = "telefono_usuario";
             telefono_usuario.Size = new Size(57, 20);
             telefono_usuario.TabIndex = 18;
@@ -136,7 +136,7 @@
             // 
             // campo_autor
             // 
-            campo_autor.Location = new Point(601, 135);
+            campo_autor.Location = new Point(28, 145);
             campo_autor.Name = "campo_autor";
             campo_autor.Size = new Size(125, 27);
             campo_autor.TabIndex = 17;
@@ -144,7 +144,7 @@
             // nombre_usuario
             // 
             nombre_usuario.AutoSize = true;
-            nombre_usuario.Location = new Point(601, 112);
+            nombre_usuario.Location = new Point(28, 122);
             nombre_usuario.Name = "nombre_usuario";
             nombre_usuario.Size = new Size(46, 20);
             nombre_usuario.TabIndex = 16;
@@ -153,15 +153,15 @@
             // librosDataGridView
             // 
             librosDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            librosDataGridView.Location = new Point(12, 59);
+            librosDataGridView.Location = new Point(297, 69);
             librosDataGridView.Name = "librosDataGridView";
             librosDataGridView.RowHeadersWidth = 51;
-            librosDataGridView.Size = new Size(559, 253);
+            librosDataGridView.Size = new Size(849, 253);
             librosDataGridView.TabIndex = 15;
             // 
             // campo_id_libro
             // 
-            campo_id_libro.Location = new Point(601, 417);
+            campo_id_libro.Location = new Point(28, 427);
             campo_id_libro.Name = "campo_id_libro";
             campo_id_libro.Size = new Size(125, 27);
             campo_id_libro.TabIndex = 28;
@@ -169,7 +169,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(601, 394);
+            label1.Location = new Point(28, 404);
             label1.Name = "label1";
             label1.Size = new Size(24, 20);
             label1.TabIndex = 29;
@@ -180,7 +180,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(839, 523);
+            ClientSize = new Size(1158, 617);
             Controls.Add(label1);
             Controls.Add(campo_id_libro);
             Controls.Add(label2);

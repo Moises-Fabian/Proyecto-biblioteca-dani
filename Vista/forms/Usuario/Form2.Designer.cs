@@ -47,16 +47,16 @@
             // usuariosDataGridView
             // 
             usuariosDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            usuariosDataGridView.Location = new Point(39, 46);
+            usuariosDataGridView.Location = new Point(333, 79);
             usuariosDataGridView.Name = "usuariosDataGridView";
             usuariosDataGridView.RowHeadersWidth = 51;
-            usuariosDataGridView.Size = new Size(488, 253);
+            usuariosDataGridView.Size = new Size(737, 253);
             usuariosDataGridView.TabIndex = 0;
             // 
             // nombre_usuario
             // 
             nombre_usuario.AutoSize = true;
-            nombre_usuario.Location = new Point(564, 131);
+            nombre_usuario.Location = new Point(33, 109);
             nombre_usuario.Name = "nombre_usuario";
             nombre_usuario.Size = new Size(64, 20);
             nombre_usuario.TabIndex = 1;
@@ -64,14 +64,14 @@
             // 
             // campo_nombre
             // 
-            campo_nombre.Location = new Point(564, 154);
+            campo_nombre.Location = new Point(33, 132);
             campo_nombre.Name = "campo_nombre";
             campo_nombre.Size = new Size(125, 27);
             campo_nombre.TabIndex = 2;
             // 
             // campo_telefono
             // 
-            campo_telefono.Location = new Point(564, 280);
+            campo_telefono.Location = new Point(33, 258);
             campo_telefono.Name = "campo_telefono";
             campo_telefono.Size = new Size(125, 27);
             campo_telefono.TabIndex = 6;
@@ -79,7 +79,7 @@
             // telefono_usuario
             // 
             telefono_usuario.AutoSize = true;
-            telefono_usuario.Location = new Point(564, 257);
+            telefono_usuario.Location = new Point(33, 235);
             telefono_usuario.Name = "telefono_usuario";
             telefono_usuario.Size = new Size(67, 20);
             telefono_usuario.TabIndex = 5;
@@ -87,7 +87,7 @@
             // 
             // campo_correo
             // 
-            campo_correo.Location = new Point(564, 217);
+            campo_correo.Location = new Point(33, 195);
             campo_correo.Name = "campo_correo";
             campo_correo.Size = new Size(125, 27);
             campo_correo.TabIndex = 8;
@@ -95,7 +95,7 @@
             // correo_usuario
             // 
             correo_usuario.AutoSize = true;
-            correo_usuario.Location = new Point(564, 194);
+            correo_usuario.Location = new Point(33, 172);
             correo_usuario.Name = "correo_usuario";
             correo_usuario.Size = new Size(54, 20);
             correo_usuario.TabIndex = 7;
@@ -103,7 +103,7 @@
             // 
             // btn_agregarUsuario
             // 
-            btn_agregarUsuario.Location = new Point(564, 330);
+            btn_agregarUsuario.Location = new Point(33, 308);
             btn_agregarUsuario.Name = "btn_agregarUsuario";
             btn_agregarUsuario.Size = new Size(94, 29);
             btn_agregarUsuario.TabIndex = 9;
@@ -113,7 +113,7 @@
             // 
             // btn_editar
             // 
-            btn_editar.Location = new Point(564, 401);
+            btn_editar.Location = new Point(33, 379);
             btn_editar.Name = "btn_editar";
             btn_editar.Size = new Size(94, 29);
             btn_editar.TabIndex = 10;
@@ -123,14 +123,14 @@
             // 
             // campo_rut
             // 
-            campo_rut.Location = new Point(564, 101);
+            campo_rut.Location = new Point(33, 79);
             campo_rut.Name = "campo_rut";
             campo_rut.Size = new Size(125, 27);
             campo_rut.TabIndex = 11;
             // 
             // button1
             // 
-            button1.Location = new Point(564, 436);
+            button1.Location = new Point(33, 414);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 12;
@@ -141,7 +141,7 @@
             // label
             // 
             label.AutoSize = true;
-            label.Location = new Point(564, 78);
+            label.Location = new Point(33, 56);
             label.Name = "label";
             label.Size = new Size(31, 20);
             label.TabIndex = 13;
@@ -151,7 +151,7 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.Firebrick;
-            label2.Location = new Point(545, 368);
+            label2.Location = new Point(14, 346);
             label2.Name = "label2";
             label2.Size = new Size(252, 20);
             label2.TabIndex = 14;
@@ -161,7 +161,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 531);
+            ClientSize = new Size(1263, 531);
             Controls.Add(label2);
             Controls.Add(label);
             Controls.Add(button1);
