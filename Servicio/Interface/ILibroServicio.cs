@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BookWorldApp.Servicio.Interface
 {
-    public interface ILibroService
+    public interface ILibroServicio
     {
         public List<Libro> ObtenerLibros();
         public void AgregarLibro(Libro libro);

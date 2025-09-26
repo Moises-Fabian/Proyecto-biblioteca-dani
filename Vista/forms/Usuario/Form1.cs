@@ -11,12 +11,12 @@ namespace BookWorldApp
     public partial class Form1 : Form
     {
         private readonly IUsuarioServicio _usuarioServicio;
-        private readonly ILibroService _libroServicio;
+        private readonly ILibroServicio _libroServicio;
         public Form1()
         {
             InitializeComponent();
             _usuarioServicio = new UsuarioServicio();
-            _libroServicio = new LibroService();
+            _libroServicio = new LibroServicio();
         }
 
         private void btn_usuarios_Click(object sender, EventArgs e)

@@ -13,8 +13,8 @@ namespace BookWorldApp.Presentador
     public class LibroPresentador
     {
         private readonly ILibroVista _libroVista;
-        private readonly ILibroService _libroService;
-        public LibroPresentador(ILibroVista libroVista, ILibroService libroService)
+        private readonly ILibroServicio _libroService;
+        public LibroPresentador(ILibroVista libroVista, ILibroServicio libroService)
         {
             _libroService = libroService;
             _libroVista = libroVista;
@@ -45,7 +45,7 @@ namespace BookWorldApp.Presentador
                 Id = _libroService.ObtenerLibros().Count + 1,
                 Titulo = _libroVista.Titulo,
                 Autor = _libroVista.Autor,
-                Aniopublicacion = _libroVista.AnioPublicacion,
+                AnioPublicacion = _libroVista.AnioPublicacion,
                 Genero = _libroVista.Genero
             };
 
@@ -87,7 +87,7 @@ namespace BookWorldApp.Presentador
                 Id = int.Parse(_libroVista.Id),
                 Titulo = _libroVista.Titulo,
                 Autor = _libroVista.Autor,
-                Aniopublicacion = _libroVista.AnioPublicacion,
+                AnioPublicacion = _libroVista.AnioPublicacion,
                 Genero = _libroVista.Genero
             };
 

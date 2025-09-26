@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace BookWorldApp.Servicio
 {
-    public class LibroService : ILibroService
+    public class LibroServicio : ILibroServicio
     {
         private readonly List<Libro> _libros = new List<Libro>();
 
-        public LibroService()
+        public LibroServicio()
         {
             _libros.AddRange(new Libro[]
             {
@@ -22,7 +22,7 @@ namespace BookWorldApp.Servicio
                     Id = 1,
                     Titulo = "Cien años de lucha",
                     Autor = "Gabriel García Márquez",
-                    Aniopublicacion = "1967",
+                    AnioPublicacion = "1967",
                     Genero = "Realismo mágico"
                 },
                 new Libro
@@ -30,7 +30,7 @@ namespace BookWorldApp.Servicio
                     Id = 2,
                     Titulo = "1984",
                     Autor = "George Orwell",
-                    Aniopublicacion = "1949",
+                    AnioPublicacion = "1949",
                     Genero = "Ciencia ficción distópica"
                 },
                 new Libro
@@ -38,7 +38,7 @@ namespace BookWorldApp.Servicio
                     Id = 3,
                     Titulo = "El señor de los anillos",
                     Autor = "J.R.R. Tolkien",
-                    Aniopublicacion = "1954",
+                    AnioPublicacion = "1954",
                     Genero = "Fantasía épica"
                 }
             });
@@ -61,7 +61,7 @@ namespace BookWorldApp.Servicio
             if (libroExistente != null) {
                 libroExistente.Titulo = libro.Titulo;
                 libroExistente.Autor = libro.Autor;
-                libroExistente.Aniopublicacion = libro.Aniopublicacion;
+                libroExistente.AnioPublicacion = libro.AnioPublicacion;
                 libroExistente.Genero = libro.Genero;
             }
         }
