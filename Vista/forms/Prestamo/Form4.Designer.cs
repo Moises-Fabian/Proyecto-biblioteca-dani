@@ -103,7 +103,7 @@
             // 
             // campo_fecha_devolucion
             // 
-            campo_fecha_devolucion.Location = new Point(569, 48);
+            campo_fecha_devolucion.Location = new Point(569, 50);
             campo_fecha_devolucion.Name = "campo_fecha_devolucion";
             campo_fecha_devolucion.Size = new Size(250, 27);
             campo_fecha_devolucion.TabIndex = 7;
