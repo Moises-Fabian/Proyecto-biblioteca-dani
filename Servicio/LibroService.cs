@@ -1,5 +1,6 @@
 ﻿using BookWorldApp.Modelo.Entidades;
 using BookWorldApp.Servicio.Interface;
+using BookWorldApp.Vista.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,37 @@ namespace BookWorldApp.Servicio
 {
     public class LibroService : ILibroService
     {
-        public List<Libro> _libros = new List<Libro>();
+        private readonly List<Libro> _libros = new List<Libro>();
 
         public LibroService()
         {
-            
+            _libros.AddRange(new Libro[]
+            {
+                new Libro
+                {
+                    Id = 1,
+                    Titulo = "Cien años de lucha",
+                    Autor = "Gabriel García Márquez",
+                    Aniopublicacion = "1967",
+                    Genero = "Realismo mágico"
+                },
+                new Libro
+                {
+                    Id = 2,
+                    Titulo = "1984",
+                    Autor = "George Orwell",
+                    Aniopublicacion = "1949",
+                    Genero = "Ciencia ficción distópica"
+                },
+                new Libro
+                {
+                    Id = 3,
+                    Titulo = "El señor de los anillos",
+                    Autor = "J.R.R. Tolkien",
+                    Aniopublicacion = "1954",
+                    Genero = "Fantasía épica"
+                }
+            });
         }
 
         public List<Libro> ObtenerLibros()
@@ -33,7 +60,7 @@ namespace BookWorldApp.Servicio
 
             if (libroExistente != null) {
                 libroExistente.Titulo = libro.Titulo;
-                libroExistente.autor = libro.autor;
+                libroExistente.Autor = libro.Autor;
                 libroExistente.Aniopublicacion = libro.Aniopublicacion;
                 libroExistente.Genero = libro.Genero;
             }
@@ -46,6 +73,10 @@ namespace BookWorldApp.Servicio
             {
                 _libros.Remove(libro);
             }
+        }
+        public bool ExisteLibro(string titulo, string autor)
+        {
+            return _libros.Any(x => x.Titulo == titulo && x.Autor == autor);
         }
     }
 }

@@ -10,8 +10,8 @@ namespace BookWorldApp.Modelo.Entidades
     {
         public int Id { get; set; }
         public string Titulo { get; set; }
-        public string autor { get; set; }
-        public int Aniopublicacion { get; set; }
+        public string Autor { get; set; }
+        public string Aniopublicacion { get; set; }
         public string Genero { get; set; }
     }
 }

@@ -13,5 +13,6 @@ namespace BookWorldApp.Servicio.Interface
         public void AgregarLibro(Libro libro);
         public void EditarLibro(Libro libro);
         public void EliminarLibro(int id);
+        bool ExisteLibro(string titulo, string autor);
     }
 }

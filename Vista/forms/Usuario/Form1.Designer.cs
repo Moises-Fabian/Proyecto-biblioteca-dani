@@ -30,7 +30,7 @@
         {
             label1 = new Label();
             btn_usuarios = new Button();
-            btn_biblioteca = new Button();
+            btn_libro = new Button();
             btn_prestamos = new Button();
             SuspendLayout();
             // 
@@ -53,15 +53,15 @@
             btn_usuarios.UseVisualStyleBackColor = true;
             btn_usuarios.Click += btn_usuarios_Click;
             // 
-            // btn_biblioteca
+            // btn_libro
             // 
-            btn_biblioteca.Location = new Point(320, 183);
-            btn_biblioteca.Name = "btn_biblioteca";
-            btn_biblioteca.Size = new Size(166, 29);
-            btn_biblioteca.TabIndex = 2;
-            btn_biblioteca.Text = "Gestión biblioteca";
-            btn_biblioteca.UseVisualStyleBackColor = true;
-            btn_biblioteca.Click += btn_biblioteca_Click;
+            btn_libro.Location = new Point(320, 183);
+            btn_libro.Name = "btn_libro";
+            btn_libro.Size = new Size(166, 29);
+            btn_libro.TabIndex = 2;
+            btn_libro.Text = "Gestión libro";
+            btn_libro.UseVisualStyleBackColor = true;
+            btn_libro.Click += btn_libro_Click;
             // 
             // btn_prestamos
             // 
@@ -78,7 +78,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btn_prestamos);
-            Controls.Add(btn_biblioteca);
+            Controls.Add(btn_libro);
             Controls.Add(btn_usuarios);
             Controls.Add(label1);
             Name = "Form1";
@@ -91,7 +91,7 @@
 
         private Label label1;
         private Button btn_usuarios;
-        private Button btn_biblioteca;
+        private Button btn_libro;
         private Button btn_prestamos;
     }
 }

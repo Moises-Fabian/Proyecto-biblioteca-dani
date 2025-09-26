@@ -2,17 +2,21 @@
 using BookWorldApp.Servicio;
 using BookWorldApp.Servicio.Interface;
 using BookWorldApp.Vista;
+using BookWorldApp.Vista.forms.Libro;
 using BookWorldApp.Vista.Interface;
+using System.Collections.Generic;
 
 namespace BookWorldApp
 {
     public partial class Form1 : Form
     {
         private readonly IUsuarioServicio _usuarioServicio;
+        private readonly ILibroService _libroServicio;
         public Form1()
         {
             InitializeComponent();
             _usuarioServicio = new UsuarioServicio();
+            _libroServicio = new LibroService();
         }
 
         private void btn_usuarios_Click(object sender, EventArgs e)
@@ -23,9 +27,12 @@ namespace BookWorldApp
             ((Form)vista).ShowDialog();
         }
 
-        private void btn_biblioteca_Click(object sender, EventArgs e)
+        private void btn_libro_Click(object sender, EventArgs e)
         {
+            ILibroVista vista = new Form3();
+            LibroPresentador presentador = new LibroPresentador(vista, _libroServicio);
 
+            ((Form)vista).ShowDialog();
         }
     }
 }
