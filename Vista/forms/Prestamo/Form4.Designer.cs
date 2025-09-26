@@ -90,7 +90,7 @@
             btn_guardar.Name = "btn_guardar";
             btn_guardar.Size = new Size(141, 29);
             btn_guardar.TabIndex = 5;
-            btn_guardar.Text = "Guardar préstamo";
+            btn_guardar.Text = "Generar préstamo";
             btn_guardar.UseVisualStyleBackColor = true;
             btn_guardar.Click += btn_guardar_Click;
             // 
