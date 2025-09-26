@@ -88,7 +88,8 @@ namespace BookWorldApp.Presentador
                 Titulo = _libroVista.Titulo,
                 Autor = _libroVista.Autor,
                 AnioPublicacion = _libroVista.AnioPublicacion,
-                Genero = _libroVista.Genero
+                Genero = _libroVista.Genero,
+                Existencias = _libroVista.Existencias
             };
 
             _libroService.EditarLibro(libroActualizado);

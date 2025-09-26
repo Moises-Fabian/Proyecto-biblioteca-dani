@@ -43,6 +43,8 @@
             librosDataGridView = new DataGridView();
             campo_id_libro = new TextBox();
             label1 = new Label();
+            campo_existencias = new TextBox();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)librosDataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.Firebrick;
-            label2.Location = new Point(9, 359);
+            label2.Location = new Point(12, 431);
             label2.Name = "label2";
             label2.Size = new Size(245, 20);
             label2.TabIndex = 27;
@@ -67,7 +69,7 @@
             // 
             // btn_eliminarLibro
             // 
-            btn_eliminarLibro.Location = new Point(28, 495);
+            btn_eliminarLibro.Location = new Point(31, 567);
             btn_eliminarLibro.Name = "btn_eliminarLibro";
             btn_eliminarLibro.Size = new Size(94, 29);
             btn_eliminarLibro.TabIndex = 25;
@@ -84,7 +86,7 @@
             // 
             // btn_editarLibro
             // 
-            btn_editarLibro.Location = new Point(28, 460);
+            btn_editarLibro.Location = new Point(31, 532);
             btn_editarLibro.Name = "btn_editarLibro";
             btn_editarLibro.Size = new Size(94, 29);
             btn_editarLibro.TabIndex = 23;
@@ -94,7 +96,7 @@
             // 
             // btn_agregarLibro
             // 
-            btn_agregarLibro.Location = new Point(28, 321);
+            btn_agregarLibro.Location = new Point(28, 385);
             btn_agregarLibro.Name = "btn_agregarLibro";
             btn_agregarLibro.Size = new Size(94, 29);
             btn_agregarLibro.TabIndex = 22;
@@ -161,7 +163,7 @@
             // 
             // campo_id_libro
             // 
-            campo_id_libro.Location = new Point(28, 427);
+            campo_id_libro.Location = new Point(31, 499);
             campo_id_libro.Name = "campo_id_libro";
             campo_id_libro.Size = new Size(125, 27);
             campo_id_libro.TabIndex = 28;
@@ -169,18 +171,36 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(28, 404);
+            label1.Location = new Point(31, 476);
             label1.Name = "label1";
             label1.Size = new Size(24, 20);
             label1.TabIndex = 29;
             label1.Text = "ID";
             label1.Click += label1_Click;
             // 
+            // campo_existencias
+            // 
+            campo_existencias.Location = new Point(28, 335);
+            campo_existencias.Name = "campo_existencias";
+            campo_existencias.Size = new Size(125, 27);
+            campo_existencias.TabIndex = 31;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(28, 312);
+            label3.Name = "label3";
+            label3.Size = new Size(80, 20);
+            label3.TabIndex = 30;
+            label3.Text = "Existencias";
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1158, 617);
+            Controls.Add(campo_existencias);
+            Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(campo_id_libro);
             Controls.Add(label2);
@@ -221,5 +241,7 @@
         private DataGridView librosDataGridView;
         private TextBox campo_id_libro;
         private Label label1;
+        private TextBox campo_existencias;
+        private Label label3;
     }
 }

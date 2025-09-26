@@ -22,6 +22,7 @@ namespace BookWorldApp.Vista.forms.Libro
         public string Autor { get => campo_autor.Text; set => campo_autor.Text = value; }
         public string AnioPublicacion { get => campo_anio.Text; set => campo_anio.Text = value; }
         public string Genero { get => campo_genero.Text; set => campo_genero.Text = value; }
+        public string Existencias { get => campo_existencias.Text; set => campo_existencias.Text = value; }
 
         public event EventHandler ObtenerLibros;
         public event EventHandler AgregarLibro;

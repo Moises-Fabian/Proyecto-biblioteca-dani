@@ -14,6 +14,7 @@ namespace BookWorldApp.Vista.Interface
         string Autor { get; set; }
         string AnioPublicacion { get; set; }
         string Genero { get; set; }
+        string Existencias { get; set; }
 
         event EventHandler ObtenerLibros;
         event EventHandler AgregarLibro;
