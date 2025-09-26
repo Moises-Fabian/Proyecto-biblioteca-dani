@@ -218,6 +218,7 @@
             Controls.Add(librosDataGridView);
             Name = "Form3";
             Text = "Form3";
+            Activated += Form3_Activated;
             Load += Form3_Load;
             ((System.ComponentModel.ISupportInitialize)librosDataGridView).EndInit();
             ResumeLayout(false);

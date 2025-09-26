@@ -54,7 +54,7 @@ namespace BookWorldApp.Vista.forms.Libro
         {
             EliminarLibro?.Invoke(this, EventArgs.Empty);
         }
-        
+
         public void MostrarMensaje(string mensaje)
         {
             MessageBox.Show(mensaje);
@@ -62,6 +62,11 @@ namespace BookWorldApp.Vista.forms.Libro
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form3_Activated(object sender, EventArgs e)
+        {
+            ObtenerLibros?.Invoke(this, EventArgs.Empty);
         }
     }
 }

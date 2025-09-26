@@ -19,10 +19,10 @@ namespace BookWorldApp.Vista.forms.Prestamo
     public partial class Form4 : Form, IPrestamoVista
     {
         private readonly ILibroServicio _libroServicio;
-        public Form4()
+        public Form4(ILibroServicio libroServicio)
         {
             InitializeComponent();
-            _libroServicio = new LibroServicio();
+            _libroServicio = libroServicio;
         }
 
         public string Rut { get => campo_rut.Text; set => campo_rut.Text = value; }

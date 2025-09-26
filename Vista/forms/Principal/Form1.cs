@@ -18,8 +18,8 @@ namespace BookWorldApp
         {
             InitializeComponent();
             _usuarioServicio = new UsuarioServicio();
-            _prestamoServicio = new PrestamoServicio(_usuarioServicio, _libroServicio);
             _libroServicio = new LibroServicio();
+            _prestamoServicio = new PrestamoServicio(_usuarioServicio, _libroServicio);
         }
 
         private void btn_usuarios_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace BookWorldApp
 
         private void btn_prestamos_Click(object sender, EventArgs e)
         {
-            IPrestamoVista vista = new Form4();
+            IPrestamoVista vista = new Form4(_libroServicio);
             var presentador = new PrestamoPresentador(vista, _prestamoServicio, _libroServicio);
             ((Form)vista).ShowDialog();
         }
