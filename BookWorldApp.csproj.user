@@ -4,7 +4,7 @@
     <Compile Update="Vista\forms\Libro\Form3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Vista\forms\Usuario\Form1.cs">
+    <Compile Update="Vista\forms\Principal\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vista\forms\Usuario\Form2.cs">
