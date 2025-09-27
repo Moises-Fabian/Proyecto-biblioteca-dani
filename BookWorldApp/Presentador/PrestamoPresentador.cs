@@ -40,7 +40,7 @@ namespace BookWorldApp.Presentador
             {
                 _prestamoServicio.AgregarPrestamo();
                 _vistaPrestamo.MostrarPrestamos(_prestamoServicio.ObtenerPrestamos());
-                _prestamoServicio.ObtenerPrestamosEnProceso().Clear();
+                _vistaPrestamo.MostrarPrestamosEnProceso(_prestamoServicio.ObtenerPrestamosEnProceso());
             }
             catch (Exception ex)
             {

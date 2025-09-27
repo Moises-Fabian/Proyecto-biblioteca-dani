@@ -38,7 +38,7 @@ namespace BookWorldApp.Servicio
 
             var nuevoPrestamo = new Prestamo
             {
-                Id = _prestamosEnProceso.Count + 1,
+                Id = _prestamos.Count > 0 ? _prestamos.Count + 1 :  _prestamosEnProceso.Count + 1,
                 Rut = rutUsuario,
                 IdLibro = idLibro,
                 FechaPrestamo = DateTime.Now,
