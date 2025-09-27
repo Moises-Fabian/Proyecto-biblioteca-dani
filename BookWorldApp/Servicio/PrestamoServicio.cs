@@ -28,11 +28,10 @@ namespace BookWorldApp.Servicio
         public void AgregarPrestamoEnProceso(string rutUsuario, int idLibro)
         {
             var usuario = _usuarioServicio.ObtenerUsuarios().FirstOrDefault(u => u.Rut == rutUsuario);
-            var libro = _libroServicio.ObtenerLibros().FirstOrDefault(l => l.Id == idLibro);
+            if (usuario == null) return;
 
-            if (usuario == null) throw new Exception("El usuario no existe.");
-            if (libro == null) throw new Exception("El libro no existe.");
-            if (libro.Existencias <= 0) throw new Exception("No hay existencias disponibles de este libro.");
+            var libro = _libroServicio.ObtenerLibros().FirstOrDefault(l => l.Id == idLibro);
+            if (libro == null) return;
 
             libro.Existencias--;
 
@@ -59,18 +58,54 @@ namespace BookWorldApp.Servicio
         public void RegistrarDevolucion(int idPrestamo)
         {
             var prestamo = _prestamos.FirstOrDefault(p => p.Id == idPrestamo);
-            if (prestamo == null) throw new Exception("El préstamo no existe.");
-            if (prestamo.FechaDevolucion != null) throw new Exception("Este libro ya fue devuelto.");
 
-            var libro = _libroServicio.ObtenerLibros().FirstOrDefault(l => l.Id == prestamo.IdLibro);
-            if (libro != null)
+            if (prestamo != null) 
             {
-                libro.Existencias++;
+                var libro = _libroServicio.ObtenerLibros().FirstOrDefault(l => l.Id == prestamo.IdLibro);
+                if (libro != null)
+                {
+                    libro.Existencias++;
 
-                prestamo.EstadoPrestamo = "Devuelto";
+                    prestamo.EstadoPrestamo = "Devuelto";
+                }
+
+                prestamo.FechaDevolucion = DateTime.Now;
+            }
+        }
+
+        public bool ExisteUsuario(string rutUsuario)
+        {
+            return _usuarioServicio.ObtenerUsuarios().Any(x => x.Rut == rutUsuario);
+        }
+
+        public bool ExisteLibro(int idLibro)
+        {
+            return _libroServicio.ObtenerLibros().Any(x => x.Id == idLibro);
+        }
+
+        public bool ExistenciasDisponibles(int idLibro)
+        {
+            return _libroServicio.ObtenerLibros().Any(x => x.Id == idLibro && x.Existencias > 0);
+        }
+
+        public bool ExistePrestamo(int idPrestamo)
+        {
+            return _prestamos.Any(p => p.Id == idPrestamo);
+        }
+
+        public bool LibroDevuelto(int idPrestamo)
+        {
+            var libro = _prestamos.FirstOrDefault(p => p.Id == idPrestamo);
+
+            if(libro != null)
+            {
+                if(libro.FechaDevolucion != null)
+                {
+                    return true;
+                }
             }
 
-            prestamo.FechaDevolucion = DateTime.Now;
+            return false;
         }
     }
 }
