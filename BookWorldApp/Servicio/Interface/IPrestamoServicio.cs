@@ -9,8 +9,10 @@ namespace BookWorldApp.Servicio.Interface
 {
     public interface IPrestamoServicio
     {
-        List<Prestamo> ObtenerTodos();
-        void RealizarPrestamo(string rutUsuario, int idLibro);
+        List<Prestamo> ObtenerPrestamosEnProceso();
+        List<Prestamo> ObtenerPrestamos();
+        void AgregarPrestamoEnProceso(string rutUsuario, int idLibro);
+        void AgregarPrestamo();
         void RegistrarDevolucion(int idPrestamo);
     }
 }

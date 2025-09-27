@@ -6,6 +6,7 @@ namespace BookWorldApp.Servicio
     public class PrestamoServicio : IPrestamoServicio
     {
         private readonly List<Prestamo> _prestamos = new List<Prestamo>();
+        private readonly List<Prestamo> _prestamosEnProceso = new List<Prestamo>();
         private readonly IUsuarioServicio _usuarioServicio;
         private readonly ILibroServicio _libroServicio;
 
@@ -15,12 +16,16 @@ namespace BookWorldApp.Servicio
             _libroServicio = libroServicio;
         }
 
-        public List<Prestamo> ObtenerTodos()
+        public List<Prestamo> ObtenerPrestamosEnProceso()
+        {
+            return _prestamosEnProceso;
+        }
+        public List<Prestamo> ObtenerPrestamos()
         {
             return _prestamos;
         }
 
-        public void RealizarPrestamo(string rutUsuario, int idLibro)
+        public void AgregarPrestamoEnProceso(string rutUsuario, int idLibro)
         {
             var usuario = _usuarioServicio.ObtenerUsuarios().FirstOrDefault(u => u.Rut == rutUsuario);
             var libro = _libroServicio.ObtenerLibros().FirstOrDefault(l => l.Id == idLibro);
@@ -33,7 +38,7 @@ namespace BookWorldApp.Servicio
 
             var nuevoPrestamo = new Prestamo
             {
-                Id = _prestamos.Count > 0 ? _prestamos.Max(p => p.Id) + 1 : 1,
+                Id = _prestamosEnProceso.Count + 1,
                 Rut = rutUsuario,
                 IdLibro = idLibro,
                 FechaPrestamo = DateTime.Now,
@@ -42,7 +47,13 @@ namespace BookWorldApp.Servicio
                 TituloLibro = libro.Titulo,
                 EstadoPrestamo = "En Préstamo"
             };
-            _prestamos.Add(nuevoPrestamo);
+            _prestamosEnProceso.Add(nuevoPrestamo);
+        }
+
+        public void AgregarPrestamo()
+        {
+            _prestamos.AddRange(_prestamosEnProceso);
+            _prestamosEnProceso.Clear();
         }
 
         public void RegistrarDevolucion(int idPrestamo)

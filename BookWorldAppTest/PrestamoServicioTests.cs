@@ -29,7 +29,7 @@ namespace BookWorldAppTest
 
             prestamoServicio.RealizarPrestamo(usuarioExistente.Rut, libroConStock.Id);
 
-            var prestamos = prestamoServicio.ObtenerTodos();
+            var prestamos = prestamoServicio.ObtenerPrestamos();
             Assert.That(prestamos.Count, Is.EqualTo(1));
             Assert.That(libroConStock.Existencias, Is.EqualTo(4));
             Assert.That(prestamos[0].EstadoPrestamo, Is.EqualTo("En Préstamo"));

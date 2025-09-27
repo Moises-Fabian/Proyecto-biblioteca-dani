@@ -29,11 +29,17 @@ namespace BookWorldApp.Vista.forms.Prestamo
         public string Id { get => campo_id_libro.Text; set => campo_id_libro.Text = value; }
         public DateTime FechaPrestamo { get => campo_fecha_prestamo.Value; set => campo_fecha_prestamo.Value = value; }
         public DateTime FechaDevolucion { get => campo_fecha_devolucion.Value; set => campo_fecha_devolucion.Value = value; }
+        public string PrestamoId { get => campo_id_prestamo.Text; set => campo_id_prestamo.Text = value; }
 
         public event EventHandler RealizarPrestamo;
         public event EventHandler RegistrarDevolucion;
+        public event EventHandler RealizarPrestamoEnProceso;
 
-
+        public void MostrarPrestamosEnProceso(List<Modelo.Entidades.Prestamo> prestamosEnProceso)
+        {
+            prestamoEnProcesodataGridView.DataSource = null;
+            prestamoEnProcesodataGridView.DataSource = prestamosEnProceso;
+        }
 
         public void MostrarPrestamos(List<Modelo.Entidades.Prestamo> prestamos)
         {
@@ -70,6 +76,11 @@ namespace BookWorldApp.Vista.forms.Prestamo
             ILibroVista vista = new Form3();
             LibroPresentador presentador = new LibroPresentador(vista, _libroServicio);
             ((Form)vista).ShowDialog();
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            RealizarPrestamoEnProceso?.Invoke(this, EventArgs.Empty);
         }
     }
 }

@@ -13,9 +13,12 @@ namespace BookWorldApp.Vista.Interface
         string Id { get; set; }
         DateTime FechaPrestamo { get; set; }
         DateTime FechaDevolucion { get; set; }
+        string PrestamoId { get; set; }
 
+        event EventHandler RealizarPrestamoEnProceso;
         event EventHandler RealizarPrestamo;
         event EventHandler RegistrarDevolucion;
+        void MostrarPrestamosEnProceso(List<Prestamo> prestamosEnProceso);
         void MostrarPrestamos(List<Prestamo> prestamos);
         void MostrarMensaje(string mensaje);
     }

@@ -40,13 +40,17 @@
             label4 = new Label();
             btn_devolucion = new Button();
             btn_existencias = new Button();
+            btn_agregar = new Button();
+            prestamoEnProcesodataGridView = new DataGridView();
+            campo_id_prestamo = new TextBox();
             ((System.ComponentModel.ISupportInitialize)prestamosDataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)prestamoEnProcesodataGridView).BeginInit();
             SuspendLayout();
             // 
             // prestamosDataGridView
             // 
             prestamosDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            prestamosDataGridView.Location = new Point(33, 127);
+            prestamosDataGridView.Location = new Point(33, 468);
             prestamosDataGridView.Name = "prestamosDataGridView";
             prestamosDataGridView.RowHeadersWidth = 51;
             prestamosDataGridView.Size = new Size(1061, 210);
@@ -86,7 +90,7 @@
             // 
             // btn_guardar
             // 
-            btn_guardar.Location = new Point(33, 92);
+            btn_guardar.Location = new Point(33, 367);
             btn_guardar.Name = "btn_guardar";
             btn_guardar.Size = new Size(141, 29);
             btn_guardar.TabIndex = 5;
@@ -128,7 +132,7 @@
             // 
             // btn_devolucion
             // 
-            btn_devolucion.Location = new Point(185, 92);
+            btn_devolucion.Location = new Point(174, 404);
             btn_devolucion.Name = "btn_devolucion";
             btn_devolucion.Size = new Size(136, 29);
             btn_devolucion.TabIndex = 10;
@@ -138,7 +142,7 @@
             // 
             // btn_existencias
             // 
-            btn_existencias.Location = new Point(333, 92);
+            btn_existencias.Location = new Point(133, 92);
             btn_existencias.Name = "btn_existencias";
             btn_existencias.Size = new Size(94, 29);
             btn_existencias.TabIndex = 11;
@@ -146,11 +150,40 @@
             btn_existencias.UseVisualStyleBackColor = true;
             btn_existencias.Click += btn_existencias_Click;
             // 
+            // btn_agregar
+            // 
+            btn_agregar.Location = new Point(33, 92);
+            btn_agregar.Name = "btn_agregar";
+            btn_agregar.Size = new Size(94, 29);
+            btn_agregar.TabIndex = 12;
+            btn_agregar.Text = "Agregar";
+            btn_agregar.UseVisualStyleBackColor = true;
+            btn_agregar.Click += btn_agregar_Click;
+            // 
+            // prestamoEnProcesodataGridView
+            // 
+            prestamoEnProcesodataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            prestamoEnProcesodataGridView.Location = new Point(36, 151);
+            prestamoEnProcesodataGridView.Name = "prestamoEnProcesodataGridView";
+            prestamoEnProcesodataGridView.RowHeadersWidth = 51;
+            prestamoEnProcesodataGridView.Size = new Size(1058, 188);
+            prestamoEnProcesodataGridView.TabIndex = 13;
+            // 
+            // campo_id_prestamo
+            // 
+            campo_id_prestamo.Location = new Point(33, 405);
+            campo_id_prestamo.Name = "campo_id_prestamo";
+            campo_id_prestamo.Size = new Size(125, 27);
+            campo_id_prestamo.TabIndex = 14;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1106, 439);
+            ClientSize = new Size(1106, 741);
+            Controls.Add(campo_id_prestamo);
+            Controls.Add(prestamoEnProcesodataGridView);
+            Controls.Add(btn_agregar);
             Controls.Add(btn_existencias);
             Controls.Add(btn_devolucion);
             Controls.Add(label4);
@@ -167,6 +200,7 @@
             Text = "Form4";
             Load += Form4_Load;
             ((System.ComponentModel.ISupportInitialize)prestamosDataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)prestamoEnProcesodataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -185,5 +219,8 @@
         private Label label4;
         private Button btn_devolucion;
         private Button btn_existencias;
+        private Button btn_agregar;
+        private DataGridView prestamoEnProcesodataGridView;
+        private TextBox campo_id_prestamo;
     }
 }
