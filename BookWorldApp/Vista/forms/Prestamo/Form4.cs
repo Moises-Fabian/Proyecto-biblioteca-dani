@@ -19,10 +19,12 @@ namespace BookWorldApp.Vista.forms.Prestamo
     public partial class Form4 : Form, IPrestamoVista
     {
         private readonly ILibroServicio _libroServicio;
-        public Form4(ILibroServicio libroServicio)
+        private readonly IUsuarioServicio _usuarioServicio;
+        public Form4(ILibroServicio libroServicio, IUsuarioServicio usuarioServicio)
         {
             InitializeComponent();
             _libroServicio = libroServicio;
+            _usuarioServicio = usuarioServicio;
         }
 
         public string Rut { get => campo_rut.Text; set => campo_rut.Text = value; }
@@ -81,6 +83,13 @@ namespace BookWorldApp.Vista.forms.Prestamo
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             RealizarPrestamoEnProceso?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void btn_usuarios_Click(object sender, EventArgs e)
+        {
+            IUsuarioVista vista = new Form2();
+            UsuarioPresentador presentador = new UsuarioPresentador(vista, _usuarioServicio);
+            ((Form)vista).ShowDialog();
         }
     }
 }

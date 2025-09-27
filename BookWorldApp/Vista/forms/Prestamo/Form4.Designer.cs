@@ -43,6 +43,7 @@
             btn_agregar = new Button();
             prestamoEnProcesodataGridView = new DataGridView();
             campo_id_prestamo = new TextBox();
+            btn_usuarios = new Button();
             ((System.ComponentModel.ISupportInitialize)prestamosDataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)prestamoEnProcesodataGridView).BeginInit();
             SuspendLayout();
@@ -142,7 +143,7 @@
             // 
             // btn_existencias
             // 
-            btn_existencias.Location = new Point(133, 92);
+            btn_existencias.Location = new Point(254, 92);
             btn_existencias.Name = "btn_existencias";
             btn_existencias.Size = new Size(94, 29);
             btn_existencias.TabIndex = 11;
@@ -176,11 +177,22 @@
             campo_id_prestamo.Size = new Size(125, 27);
             campo_id_prestamo.TabIndex = 14;
             // 
+            // btn_usuarios
+            // 
+            btn_usuarios.Location = new Point(145, 92);
+            btn_usuarios.Name = "btn_usuarios";
+            btn_usuarios.Size = new Size(99, 29);
+            btn_usuarios.TabIndex = 15;
+            btn_usuarios.Text = "Ver usuarios";
+            btn_usuarios.UseVisualStyleBackColor = true;
+            btn_usuarios.Click += btn_usuarios_Click;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1106, 741);
+            Controls.Add(btn_usuarios);
             Controls.Add(campo_id_prestamo);
             Controls.Add(prestamoEnProcesodataGridView);
             Controls.Add(btn_agregar);
@@ -222,5 +234,6 @@
         private Button btn_agregar;
         private DataGridView prestamoEnProcesodataGridView;
         private TextBox campo_id_prestamo;
+        private Button btn_usuarios;
     }
 }

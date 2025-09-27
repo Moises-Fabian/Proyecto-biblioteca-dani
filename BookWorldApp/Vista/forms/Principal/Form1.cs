@@ -40,7 +40,7 @@ namespace BookWorldApp
 
         private void btn_prestamos_Click(object sender, EventArgs e)
         {
-            IPrestamoVista vista = new Form4(_libroServicio);
+            IPrestamoVista vista = new Form4(_libroServicio, _usuarioServicio);
             var presentador = new PrestamoPresentador(vista, _prestamoServicio, _libroServicio);
             ((Form)vista).ShowDialog();
         }
